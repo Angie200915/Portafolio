@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#000000;
+    --color-secundario:#4F1787;
+    --color-terciario: #E8C5E5;
+    --color-hover:#F19ED2;
+    --color-otro: #EB3678;
+
+
+    --fuente-montserrat: 'Montserrat', sans serif;
+    --fuente-krona: 'Krona One', sans serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    /*margin: 10% 15%;  agrega un margen para centrar los cuadrados en la pantalla */
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;
+    font-family:var(--fuente-krona);
+    color: var(--color-otro);
+}
+
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__enlaces{
+    display: flex; /* Se usa para posicionar elementos en la pantalla*/ /* coloca los cuadrados uno al lado del otro */
+    justify-content: space-between;
+    flex-direction: column; /* Se usa para indicar que es vertical*/
+    align-items: center; /*Se usa para centrar los items pero solo si se usa colum en flex direction*/
+    gap: 32px; /* Se usa para indicar el espacio entre cada item*/
+}
+
+.presentacion__enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces_link{
+    width: 50%;
+    text-align: center; /* Se usa para centrar el texto*/
+    padding: 21.5px 0;
+    border-radius: 8px; /* Se indica que tan redondo se quiere el boton siendo 0 cuadrado*/
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario); /*Primero se indica el grosor del borde, luego el tipo y luego el color*/
+    display: flex;
+    justify-content: center; /*Solo se usa para centrar los items si están en horizontal*/
+    gap: 10px;
+}
+
+.presentacion__enlaces_link:hover{ /*Se usa hover para definir el color al que cambia cuando el cursor se pasa por encima*/
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px; /*El padding es responsable de definir la distancia entre un contenido y sus bordes*/
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat); /*Se usa para controlar el tipo de letra del texto*/
+    font-size: 1.5rem; /*Se usa para controlar el tamaño del texto*/
+    font-weight: 400; /*Se usa para controlar el grosor del texto*/
+}
+
+@media (max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido{
+        width: auto;
+    }
+}
